@@ -119,7 +119,7 @@ ul li:last-child > a {
                                 My profile
                             </a>
                             
-                            <div class="sb-sidenav-menu-heading">Extra</div>
+                            <div class="sb-sidenav-menu-heading">E</div>
                             <a class="nav-link" href="<?= site_url('Dashboard/patientAdd');?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Post Comment

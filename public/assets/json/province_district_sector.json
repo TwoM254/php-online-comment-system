@@ -1,0 +1,137 @@
+[
+ {
+  "id":"1",
+  "name":"kigali city",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"2",
+  "name":"west province",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"3",
+  "name":"sauth province",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"4",
+  "name":"east province",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"5",
+  "name":"north province",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"6",
+  "name":"gasabo",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"7",
+  "name":"kicukiro",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"8",
+  "name":"nyarugenge",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"9",
+  "name":"karongi",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"10",
+  "name":"rusizi",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"11",
+  "name":"muhanga",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"12",
+  "name":"nyanza",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"13",
+  "name":"rwamagana",
+  "parent_id":"4"
+ }, 
+ {
+  "id":"14",
+  "name":"rulindo",
+  "parent_id":"5"
+ }, 
+ {
+  "id":"15",
+  "name":"musanze",
+  "parent_id":"5"
+ }, 
+ {
+  "id":"16",
+  "name":"Huntsville",
+  "parent_id":"5"
+ }, 
+ {
+  "id":"17",
+  "name":"Los Angeles",
+  "parent_id":"6"
+ }, 
+ {
+  "id":"18",
+  "name":"San Francisco",
+  "parent_id":"6"
+ }, 
+ {
+  "id":"19",
+  "name":"San Diego",
+  "parent_id":"6"
+ }, 
+ {
+  "id":"20",
+  "name":"Toronto",
+  "parent_id":"7"
+ }, 
+ {
+  "id":"21",
+  "name":"Ottawa",
+  "parent_id":"7"
+ }, 
+ {
+  "id":"22",
+  "name":"Vancouver",
+  "parent_id":"8"
+ }, 
+ {
+  "id":"23",
+  "name":"Victoria",
+  "parent_id":"8"
+ }, 
+ {
+  "id":"24",
+  "name":"Sydney",
+  "parent_id":"9"
+ }, 
+ {
+  "id":"25",
+  "name":"Newcastle",
+  "parent_id":"9"
+ }, 
+ {
+  "id":"26",
+  "name":"City of Brisbane",
+  "parent_id":"10"
+ }, 
+ {
+  "id":"27",
+  "name":"Gold Coast",
+  "parent_id":"10"
+ }
+]

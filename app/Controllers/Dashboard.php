@@ -12,7 +12,7 @@ class Dashboard extends BaseController
         }
         public function indexx()
         {
-                return view("dashboard/patientAdd");
+                return view("dashboard/addcomment");
         }
     public function index()
     {
@@ -20,26 +20,27 @@ class Dashboard extends BaseController
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title'=> 'ARV | Dashboard',
+            'title'=> 'POCS | Dashboard',
             'stitle'=> 'Dashboard',
             'userInfo'=>$userInfo
         ];
         return view('dashboard/index', $data);
     }
-    public function patientAdd()
+    public function addcomment()
     {
         $userModel = new \App\Models\userModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title'=> 'ARV | Add Patient',
-            'stitle'=> 'Add Patient',
+            'title'=> 'POCS | Add comment',
+            'stitle'=> 'Add comment',
             'userInfo'=>$userInfo
         ];
-        return view('dashboard/patientAdd', $data);
+        return view('dashboard/addcomment', $data);
     }
-    public function patientRegister()
+    public function commentRegister()
     {
+        /*
         //form validation
         //$validation = $this->validate([
         //    'username' =>'required',
@@ -87,20 +88,21 @@ class Dashboard extends BaseController
                                 ],
                 ]);
         if (!$validation) {
-            return view('dashboard/patientAdd', ['validation'=>$this->validator]);
+            return view('dashboard/addcomment', ['validation'=>$this->validator]);
         } else {
+                */
             //lets register user in db
          $fname=$this->request->getPost('fname');
          $lname=$this->request->getPost('lname');
          $gender=$this->request->getPost('gender');
-         $phone=$this->request->getPost('phone');
+         $telphone=$this->request->getPost('telphone');
          $comment=$this->request->getPost('comment');
                         
             $values= [
                                 'fname'=>$fname,
                                 'lname'=>$lname,
                                 'gender'=>$gender,
-                                'phone'=>$phone,
+                                 'phone'=>$telphone,
                                 'comment'=>$comment,
                         ];
             $commentModel = new \App\Models\commentModel();
@@ -112,9 +114,8 @@ class Dashboard extends BaseController
                 return view("pocsviews/login");
                 //$last_id = $userModel->insertId();//this is last inserted id
                 //session()->set('loggedUser', $last_id);
-                return redirect()->to('/\\');
+                //return redirect()->to('/\\');
             }
         }
     }
-}
 ?>

@@ -86,18 +86,16 @@ ul li:last-child > a {
 /* ..........end of header............*/
         </style>
     </head>
-    <body class="sb-nav-fixed">
+    <body class="bg-secondary">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="index.php">PHP Online Comment System. </a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                
-            </form>
+            
             <!-- Navbar-->
             <ul>
           <li>
-            <a href="" id="user"></a>
+            <a href="" id="user"> <?= ucfirst($userInfo['username']); ?></a>
             <ul>
               <li><a href="<?= site_url('pocscontroller/logout'); ?>">Logout</a></li>
             </ul>
@@ -119,7 +117,7 @@ ul li:last-child > a {
                                 My profile
                             </a>
                             
-                            <div class="sb-sidenav-menu-heading">E</div>
+                            <div class="sb-sidenav-menu-heading">Extra</div>
                             <a class="nav-link" href="<?= site_url('Dashboard/patientAdd');?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Post Comment
@@ -129,6 +127,7 @@ ul li:last-child > a {
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
+                        Mrs/Miss. <?= ucfirst($userInfo['username']); ?>
                         
                     </div>
                 </nav>
@@ -142,7 +141,7 @@ ul li:last-child > a {
                         </ol></center>
                                                 
                         <!-- main -->
-                        <form method="Post" action="<?= base_url("Dashboard/patientRegister");?>" class="form-group" >
+                        <form method="Post" action="<?= base_url("Dashboard/commentRegister");?>" class="form-group" >
                 <?= csrf_field();?>
   
 
@@ -179,14 +178,14 @@ ul li:last-child > a {
 <div class="col-md-6">
 <div class="form-group">
     <label class="small mb-1" for="inputEmailAddress">phone</label>
-    <input class="form-control py-2" id="inputLastName" type="text" name="phone" maxlength="10" placeholder="Enter your phone number" value="<?= set_value('phone');?>"/>
-    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'phone') : '' ?></span>
+    <input class="form-control py-2" id="inputLastName" type="text" name="telphone" maxlength="10" placeholder="Enter your phone number" value="<?= set_value('phone');?>"/>
+    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'telphone') : '' ?></span>
 </div></div></div>
 <div class="form-row">
 	<div class="col-md-12">
 		<div class="form-group">
 			<label class="small mb-1" for="inputPassword">comment</label>
-			<textarea class="form-control py-2" id="inputPassword" type="text" name="password" placeholder="Enter your your comment here."></textarea>
+			<textarea class="form-control py-2" id="inputPassword" type="text" name="comment" placeholder="Enter your your comment here."></textarea>
 			<span class="text-danger"><?= isset($validation) ? display_error($validation, 'comment') : '' ?></span>
 		</div>
    </div>
@@ -201,7 +200,7 @@ ul li:last-child > a {
 
 
 
-                <footer class="py-4 bg-light mt-auto">
+                <footer  class="bg-secondary" class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; 2021</div>

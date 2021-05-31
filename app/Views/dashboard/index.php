@@ -84,7 +84,7 @@ ul li:last-child > a {
 /* ..........end of header............*/
         </style>
     </head>
-    <body class="sb-nav-fixed">
+    <body class="bg-secondary">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="<?= base_url('Dashboard/index');?>">PHP Online Comment system.</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
@@ -119,7 +119,7 @@ ul li:last-child > a {
                            
                             
                             <div class="sb-sidenav-menu-heading">Extra</div>
-                            <a class="nav-link" href="<?= site_url('Dashboard/patientAdd');?>">
+                            <a class="nav-link" href="<?= site_url('Dashboard/addcomment');?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Post Comment
                             </a>

@@ -50,7 +50,7 @@
 	    </form>
             </div>
             <div class="card-footer text-center">
-                <div class="small"><a href="<?= site_url("pocscontroller/register");?>">Need an account? Sign up!</a>
+                <div class="small"><a href="<?= site_url("pocscontroller/register");?>">I don't have an account!</a>
                 </div>
             </div>
         </div>

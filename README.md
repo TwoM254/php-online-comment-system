@@ -1,56 +1,135 @@
-# CodeIgniter 4 Framework
-
-## What is CodeIgniter?
-
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
-
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
-
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
-
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
 
 
-## Important Change with index.php
+PROJECT NAME:PHP ONLINE COMMENT SYSTEM
+--------------------------------------
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+hey, our project is being developed using codeigninet 4 is a PHP MVC framework used for developing web applications rapidly
+   
+this project deals on how students can get information for php at time 
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+problems this project is their to solve
 
-**Please** read the user guide for a better explanation of how CI4 works!
+-improve perfornmance of student becouse of it is not possible to asked question during attend the class
+  due to few hour of learning
+- this system allow the teacher to know the problems of students in order to start on it at next class
 
-## Repository Management
+The Pre-Requisite For Codeigniter 4
+===========================================
 
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+-System must have php 7.2+.
+-The composer must have installed into the system.
+-The php internationalize package(php_intl.dll) must be enabled.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+-I am using xampp to install and configure codeigniter, You can check php version using below command –
 
-## Contributing
+C:\xampp\htdocs\codeigniter-blog>php -v
+-PHP 7.3.8 (cli) (built: Jul 30 2019 12:44:06) ( ZTS MSVC15 (Visual C++ 2017) x64 )
+-Copyright (c) 1997-2018 The PHP Group
 
-We welcome contributions from the community.
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing.md) section in the development repository.
 
-## Server Requirements
+-C:\xampp\htdocs\codeigniter-blog>php -v
+-PHP 7.3.8 (cli) (built: Jul 30 2019 12:44:06) ( ZTS MSVC15 (Visual C++ 2017) x64 )
+-Copyright (c) 1997-2018 The PHP Group
+-Zend Engine v3.3.8, Copyright (c) 1998-2018 Zend Technologies
 
-PHP version 7.3 or higher is required, with the following extensions installed:
+Install CodeIgniter In Xampp
+--------------------------------
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+-I am using composer to install package. Open the window command window and run below command –
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+-composer create-project codeigniter4/php online comment system codeigniter-blog -s rc
 
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+-codeigniter-blog is a your codeigniter project name.
+
+-I am creating skeleton app of codeigniter 4, The CodeIgniter 4 app starter repository holds a skeleton application, with a composer dependency on the latest released version of the framework.
+
+-Now, We will update dependency using below command. Whenever there is a new release, then from the command line in your project root:
+
+-composer update
+
+
+How to run PHP ONLINE COMMENT SYSTEM
+=====================================
+-install xampp, composer
+-downoan project(php online comment system) on github and coppy&paste to xampp/htdocs
+-create database called "arv"
+-open project in IDE and edit file called ".env" uncomment CI_ENVIRONMENT = development 
+go down and database.default.hostname=localhost
+	    database.default.database=arv
+	    database.default.username=root
+            database.default.password= 
+
+- import table from project xampp/htdocs/php online comment system/DB/arv.sql
+-before run project you must test codeingiter by using php spark serve on you terminal(visual studio),
+and  add url localhost:8080/welcome/index1.
+-if you're student click on student button ,sign in if  you have an account 
+esle click on link called "i don't have an account" create account after  back to sign in.
+-click on post comment on left handside and fill requerement click Post Now and logout.
+
+
+
+-if u are lecture click lecture button,
+     there are 2 registered acount of recture by admin are: 1.iradukunda@gmail.com   pass:12345
+							    2.muh3@gmai.com          pass:12345
+
+-look the student made comment read and logout.
+
+-if you are admin you must register another lecture 
+by  write in url localhost:8080/admin
+    there two account registered : 1.username:Fabio	pass:fabio123
+				   2.username:Moses     pass:Moses123
+-admin could add new lecture and delelete comment.
+
+ 
+
+
+
+authors
+=======
+this mini project is being built by NIYITANGA moise and KWIZERA eric
+
+structure of project
+====================
+our projects has three main parts (mvc) model controller
+
+models
+=======
+1.admin_model.php
+2.commentModel.php
+3.userModel.php
+4.lectModel.php
+
+ views 
+========
+dashboard
+--------
+1.addcomment.php
+2.index.php
+3.indexx.php
+
+pocsviews
+---------
+1.admin_login.php
+2.deletecomment.php
+3.lect_login.php
+4.lect_register.php
+5.login.php
+6.main_view.php
+7.register.php
+
+controler
+=========
+1.admin.php
+2.Dashboard.php
+3.lectcontroller.php
+4.main.php
+5.pocscontroller
+6.tablecontroller.php
+7.welcome.php
+
+
+
+
+
+

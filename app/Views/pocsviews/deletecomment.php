@@ -94,8 +94,8 @@ ul li:last-child > a {
             
             <!-- Navbar-->
             <ul>
-          <li>
-          <a href="<?= site_url('/pocscontroller'); ?>" id="user">Logout</a>
+            <li>
+          <a href="<?= site_url('/admin'); ?>" id="user">Logout</a>
             
           </li>
         </ul>
@@ -105,27 +105,32 @@ ul li:last-child > a {
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Interfaces</div>
-                            <a class="nav-link" href="<?= site_url('Dashboard/index');?>">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                            <div class="sb-sidenav-menu-heading"><h1>p</h1></div>
+                            <a class="nav-link" href="<?= site_url('#');?>">
+                                
+                               
                             </a>
                             <a class="nav-link" href="">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                My profile
+                            <div class="sb-sidenav-menu-heading"><h1>o</h1></div>
+                            <a class="nav-link" href="<?= site_url('#');?>">
+                               
                             </a>
                             
-                            <div class="sb-sidenav-menu-heading">Extra</div>
-                            <a class="nav-link" href="<?= site_url('Dashboard/patientAdd');?>">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Post Comment
+                            <div class="sb-sidenav-menu-heading"><h1>c</h1></div>
+                            <a class="nav-link" href="<?= site_url('#');?>">
+                               
+                               
+                            </a>
+                            <div class="sb-sidenav-menu-heading"><h1>s</h1></div>
+                            <a class="nav-link" href="<?= site_url('#');?>">
+                                
+                               
                             </a>
                             
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small"></div>
-                        
+                        <div class="small">Logged in as:</div>
                       
                         
                     </div>
@@ -134,64 +139,55 @@ ul li:last-child > a {
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <center><h1 class="mt-4">Add Comment</h1></center>
+                        <center><h1 class="mt-4">             Student who made Comment</h1></center>
                         <center><ol class="breadcrumb mb-4">
                            <li class="breadcrumb-item active">================================================================================================</li>
                         </ol></center>
                                                 
                         <!-- main -->
-                        <form method="Post" action="<?= base_url("Dashboard/commentRegister");?>" class="form-group" >
-                <?= csrf_field();?>
-  
+             <div class="table-responsive">
+                 <table class="table table-bordered">
 
-                <div class="form-row">
-    <div class="col-md-6">
-        <div class="form-group">
-            <label class="small mb-1" for="inputFirstName">First Name</label>
-            <input class="form-control py-2" id="inputFirstName" type="text" name="fname" placeholder="Enter your first name" value="<?= set_value('fname');?>"/>
-            <span class="text-danger"><?= isset($validation) ? display_error($validation, 'fname') : '' ?></span>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            <label class="small mb-1" for="inputLastName">Last Name</label>
-            <input class="form-control py-2" id="inputLastName" type="text"  name="lname" placeholder="Enter your last name"  value="<?= set_value('lname');?>"/>
-            <span class="text-danger"><?= isset($validation) ? display_error($validation, 'lname') : '' ?></span>
-        </div>
-    </div>
-</div>
-<div class="form-row">
-<div class="col-md-6">
-<div class="form-group">
-    <label class="small mb-1" for="inputEmailAddress">Gender</label>
-    <select class="form-control py-2" name="gender">
-        <option selected>select...</option>
-        <option value="female">female</option>
-        <option value="male">male</option>
-    </select>
+                 <tr>
+                     <th>ID</th>
+                     <th>FIRST NAME</th>
+                     <th>LAST NAME</th>
+                     <th>GENDER</th>
+                     <th>PHONE</th>
+                     <th>COMMENT</th>
+                     <th>DELETE</th>
+                 </tr>
+                 
 
-    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'gender') : '' ?></span>
-</div>
-</div>
+<?php
 
-<div class="col-md-6">
-<div class="form-group">
-    <label class="small mb-1" for="inputEmailAddress">phone</label>
-    <input class="form-control py-2" id="inputLastName" type="text" name="telphone" maxlength="10" placeholder="Enter your phone number" value="<?= set_value('phone');?>"/>
-    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'telphone') : '' ?></span>
-</div></div></div>
-<div class="form-row">
-	<div class="col-md-12">
-		<div class="form-group">
-			<label class="small mb-1" for="inputPassword">comment</label>
-			<textarea class="form-control py-2" id="inputPassword" type="text" name="comment" placeholder="Enter your your comment here."></textarea>
-			<span class="text-danger"><?= isset($validation) ? display_error($validation, 'comment') : '' ?></span>
-		</div>
-   </div>
-   <div class="form-group">
-    <button class="btn btn-primary btn-brock" type="submit">Post Now</button>
-</div>
-</div>     </form>          
+foreach($datainfo as $row) :?>
+<tr>
+
+    <td><?php echo $row['id'];?></td>
+    <td><?php echo $row['fname'];?></td>
+    <td><?php echo $row['lname'];?></td>
+    <td><?php echo $row['gender'];?></td>
+    <td><?php echo $row['phone'];?></td>
+    <td><?php echo $row['comment'];?></td>
+    <td><a href="<?= site_url('tablecontroller/delete'.$row['id'])?>">delete</a></td>
+
+
+</tr>
+<?php
+endforeach;
+
+
+
+ ?>
+
+                 </table>
+
+             </div>   
+             <div>
+             
+            
+             </div>    
 
 
 

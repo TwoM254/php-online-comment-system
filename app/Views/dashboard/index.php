@@ -95,10 +95,8 @@ ul li:last-child > a {
             <!-- Navbar-->
             <ul>
           <li>
-            <a href="" id="user"><?= ucfirst($userInfo['username']); ?></a>
-            <ul>
-              <li><a href="<?= site_url('pocscontroller/logout'); ?>">Logout</a></li>
-            </ul>
+          <a href="<?= site_url('/pocscontroller'); ?>" id="user">Logout</a>
+            
           </li>
         </ul>
         </nav>
@@ -127,9 +125,7 @@ ul li:last-child > a {
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Dr. <?= ucfirst($userInfo['username']); ?>
-                    </div>
+                   
                 </nav>
             </div>
             <div id="layoutSidenav_content">

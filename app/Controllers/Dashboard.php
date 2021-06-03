@@ -10,10 +10,7 @@ class Dashboard extends BaseController
         public function __construct(){
                 helper(['url','form']);
         }
-        public function indexx()
-        {
-                return view("dashboard/addcomment");
-        }
+        
     public function index()
     {
         $userModel = new \App\Models\userModel();
@@ -111,7 +108,7 @@ class Dashboard extends BaseController
                 return redirect()->back()->with('fail', 'Operation failed!');
             } else {
                 //return redirect()->to('register')->with('succsess', 'you are registered succcessfuly!');
-                return view("pocsviews/login");
+                return view("Dashboard/addcomment");
                 //$last_id = $userModel->insertId();//this is last inserted id
                 //session()->set('loggedUser', $last_id);
                 //return redirect()->to('/\\');

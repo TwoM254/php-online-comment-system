@@ -139,7 +139,7 @@ strong {
 }
 
 small {
-  font-size: 80%;
+  font-size: 110%;
 }
 
 sub,
@@ -426,8 +426,10 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 120%;
   font-weight: 400;
+  color:rgb(0, 33, 65);
+  
 }
 
 mark,
@@ -7392,7 +7394,8 @@ button.bg-dark:focus {
   position: sticky !important;
 }
 
-.fixed-top, .sb-nav-fixed #layoutSidenav #layoutSidenav_nav, .sb-nav-fixed .sb-topnav {
+.fixed-top, .sb-nav-fixed #layoutSidenav #layoutSidenav_nav, .
+ .sb-topnav {
   position: fixed;
   top: 0;
   right: 0;

@@ -21,20 +21,21 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Student Login</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4"><u>Admin Login</u></h3></div>
                                     <div class="card-body">
-				<form method="post" action="<?= base_url('pocscontroller/check'); ?>" outocomplete="off">
+				<form method="post" action="<?= base_url('admin/check2'); ?>" outocomplete="off">
 				<?= csrf_field(); ?>
 				<?php if(!empty(session()->getFlashdata('fail'))): ?>
 				<div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
 				<?php endif ?>
 				<div class="form-group">
-                    <label class="small mb-1" for="inputEmailAddress">Email</label>
-                    <input class="form-control py-4" id="inputEmailAddress" type="text" value="<?= set_value('email');?>" name="email" placeholder="Enter your email" /><span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
+                    <label class="small mb-1" for="inputEmailAddress">username</label>
+                    <input class="form-control py-4" id="inputEmailAddress" type="text"  name="username" placeholder="Enter Admin Username" />
+                    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'username') : '' ?></span>
                 </div>
                 <div class="form-group">
                     <label class="small mb-1" for="inputPassword">Password</label>
-                    <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Enter your password"/>
+                    <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Enter Admin Password"/>
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') :''?></span>
                 </div>
                 <div class="form-group">
@@ -51,16 +52,11 @@
 
     <div class="small"><a href="<?= site_url('welcome/index1');?>">Back</a></div></div>
 </div></div>
-	    </form>
-            </div>
-            <div class="card-footer text-center">
-            <div class="card shadow-lg border-0 rounded-lg ">
-                <div class="card-header"><a href="<?= site_url("pocscontroller/register");?>">I don't have an account!</a>
-                </div>
+
+</div>	    </form>
             </div></div>
         </div>
     </div>
-</div>
 </div>
 </main>
 </div><br><br>
